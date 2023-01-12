@@ -1,0 +1,541 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{esint}
+\usepackage{physics}
+
+\title{A mathematical trivium\footnote{Appeared in Uspekhi Mat. Nauk \textbf{46:1} (1991), 225--232 and Russian Math. Surveys \textbf{46:1} (1991), 271--278}}
+\author{V.I.\,Arnol'd\footnote{Translated by C.J.\,Shaddock}}
+\date{}
+
+% Used in a few places
+\DeclareMathOperator{\gradt}{grad}
+\DeclareMathOperator{\divt}{div}
+% Used in problem 77
+\DeclareMathOperator{\Laplace}{\Delta}
+
+\begin{document}
+
+\maketitle
+
+The standard of mathematical culture is failing; both undergraduate and
+postgraduate students leaving our colleges, including the Mechanics and
+Mathematics Faculty of Moscow State University, are becoming more ignorant than
+the professors and teachers. What is the reason for this abnormal phenomenon?
+Under normal conditions students know their subject better than their professors
+in accordance with the general principle of the diffusion of knowledge: new
+knowledge prevails not because it is taught by old men, but because new
+generations come along who know it.
+
+Among the causes of this abnormal situation I would like to single out those for
+which we ourselves are responsible, so that we can try to correct what is within
+our power. One such cause, I believe, is our system of examinations, which is
+specially designed for the systematic production of rejects, that is
+pseudo-pupils who learn mathematics like Marxism: they cram themselves with
+formulae and rote-learning of answers to the most frequent examination
+questions.
+
+How can the standard of training of a mathematician be measured? Neither a list
+of courses nor their syllabuses determine the standard. The only way to
+determine what we have actually taught our students is to list the problems
+which they should be able to solve as a result of their instruction.
+
+I am not talking about difficult kinds of problems, but about the simple
+questions which form the strictly essential minimum. There need not necessarily
+be many of these problems, but we must insist that the students are able to
+solve them. I.E.\,Tamm used to tell the story that having fallen into the hands
+of the Makhnovtsy during the Civil War, he said under interrogation that he
+taught in the physics and mathematics faculty. He owed his life to the fact that
+he could solve a problem in theory of series, which was put to him as a test of
+his veracity. Our students should be prepared for such ordeals!
+
+Throughout the world a mathematics examination consists of the written solution
+of problems. The written character of the test is everywhere considered just as
+much a necessary sign of a democratic society as the choice between several
+candidates in an election. In fact, in an oral examination the student is
+completely defenseless. While conducting examinations in the department of
+differential equations in the Mechanics and Mathematics Faculty of Moscow State
+University, I have overheard examiners at a nearby table failing students who
+gave immaculate answers (which perhaps exceeded the level of comprehension of
+the teachers). Cases have also been known when they have failed a student on
+purpose (sometimes I have saved the situation by entering the examination room).
+
+Written work is a document and the examiner is perforce more objective in
+marking it (particularly if the work to be marked is anonymous, as it should
+be).
+
+There is another not unimportant advantage of written examinations: the problems
+are preserved and can be published or passed on to students of the next course
+in preparation for their examination. In addition, these problems determine both
+the standard of the course and the standard of the teacher who has compiled
+them. His strong and weak points can be seen at once, and specialists can
+immediately asses the teacher both in respect of what he wants to teach the
+students and what he has succeeded in teaching them.
+
+Incidentally, in France the problems in the \emph{Concours g\'en\'eral}, common
+to the whole country and roughly equivalent to our Olympiad, are compiled by
+teachers sending their problems to Paris where the best are chosen. The Ministry
+obtains objective data about the standard of its teachers by comparing firstly
+the problems set, and secondly the results of their pupils. With us, however,
+teachers are assessed as you know by indications such as their external
+appearance, quickness of speech, and ideological ``correctness''.
+
+It is not surprising that other countries are unwilling to recognize our
+diplomas (in future I think this will even extend to diplomas in mathematics).
+Assessments obtained from oral examinations that leave no records cannot be
+objectively compared with anything else and have an extremely vague and relative
+weight, wholly dependent on the real standard of teaching and the demands made
+in a given college. With the same syllabus and marks the knowledge and ability
+of the graduates may vary (in some sense) by a factor of ten. Besides, an oral
+examination can be far more easily falsified (this has even happened with us at
+the Mechanics and Mathematics Faculty of Moscow State University, where, as a
+blind teacher once said, a good mark must be given to a student whose answer is
+``very close to the textbook'', even if he cannot answer a single question).
+
+The essence and the shortcomings of our system of mathematical education have
+been brilliantly described by Richard Feynman in his memoirs (\emph{Surely
+  you're joking, Mr Feynman} (Norton, New York 1984), in the chapter on physics
+education in Brazil, a Russian translation of which was published in Uspekhi
+Fizicheskikh Nauk \textbf{148}:3 (1986)).
+
+In Feynman's words, these students understand nothing, but never ask questions,
+so that they appear to understand everything. If anybody begins to ask
+questions, he is quickly put in his place, as he is wasting the time of the
+lecturer dictating his lecture and the students copying it down. The result is
+that no one can apply anything they have been taught to even a single example.
+The examinations too (dogmatic like ours: state the definition, state the
+theorem) are always successfully passed. The students reach a state of
+``self-propagating pseudo-education'' and can teach future generations in the
+same way. But all this activity in completely senseless, and in fact our output
+of specialists is to a significant extent a fraud, an illusion and a sham: these
+so-called specialists are not in a position to solve the simplest problems, and
+do not possess the rudiments of their trade.
+
+Thus, \emph{to put an end to this spurious enhancement of the results, we must
+  specify not a list of theorems, but a collection of problems which students
+  should be able to solve. These lists of problems must be published annually (I
+  think there should be ten problems for each one-semester course).} Then we
+shall see what we really teach the students and how far we are successful. So
+that the students learn to apply their knowledge, \emph{all examinations must be
+  written examinations}.
+
+Naturally the problems will vary from college to college and from year to year.
+Then the standard of different teachers and the output in different years can be
+compared. A student who takes much more than five minutes to calculate the mean
+of $\sin^{100}x$ with 10\% accuracy has no mastery of mathematics, even if he
+has studied non-standard analysis, universal algebra, supermanifolds, or
+embedding theorems.
+
+The compilation of model problems is a laborious job, but I think it must be
+done. As an attempt I give below a list of one hundred problems forming a
+mathematical minimum for a physics student. Model problems (unlike syllabuses)
+are not uniquely defined, and many will probably not agree with me. Nonetheless
+I assume that it is necessary to begin to determine mathematical standards by
+means of written examinations and model problems. It is to be hoped that in the
+future students will receive model problems for each course at the beginning of
+each semester, and oral examination for which the students cram by heart will
+become a thing of the past.
+
+\begin{enumerate}
+\item Sketch the graph of the derivative and the graph of the integral of a function given by a freehand graph.
+
+\item Find the limit
+  \begin{equation*}
+    \lim_{x \rightarrow 0} \frac{\sin \tan x - \tan \sin x}{\arcsin \arctan x - \arctan \arcsin x}.
+  \end{equation*}
+
+\item Find the critical values and critical points of the mapping $z \mapsto z^2 + 2\bar{z}$ (sketch the answer).
+
+\item Calculate the 100th derivative of the function
+
+  \begin{equation*}
+    \frac{x^2+1}{x^3-x}.
+  \end{equation*}
+
+\item Calculate the 100th derivative of the function
+
+  \begin{equation*}
+    \frac{1}{x^2 + 3x + 2}
+  \end{equation*}
+
+  at $x = 0$ with 10\% relative error.
+
+\item In the $(x, y)$-plane sketch the curve given parametrically by
+
+  \begin{equation*}
+    x = 2t  - 4t^3, \quad y = t^2 - 3t^4
+  \end{equation*}
+
+\item How many normals to an ellipse can be drawn from a given point of the plane? Find the region in which the number of normals is maximal.
+
+\item How many maxima, minima, and saddle points does the function $x^4 + y^4 + z^4 + u^4 + v^4$ have on the surface $x + \dots + v = 0, x^2 + \dots + v^2 = 1, x^3 + \dots + v^3 = C$?
+
+\item Does every positive polynomial in two real variables attain its lower bound in the plane?
+
+\item Investigate the asymptotic behaviour of the solutions $y$ of the equation $x^5 + x^2y^2 = y^6$ that tend to zero as $x \rightarrow 0$.
+
+\item Investigate the convergence of the integral
+
+  \begin{equation*}
+    \iint \limits_{-\infty}^{+\infty} \frac{dx\,dy}{1 + x^4y^4}.
+  \end{equation*}
+
+\item Find the flux of the vector field $\vec{r}/r^3$ through the surface
+
+  \begin{equation*}
+    (x - 1)^2 + y^2 + z^2 = 2 .
+  \end{equation*}
+
+\item Calculate with 5\% relative error
+
+  \begin{equation*}
+    \int_{1}^{10} x^x \,dx.
+  \end{equation*}
+
+\item Calculate with at most 10\% relative error
+
+  \begin{equation*}
+    \int_{-\infty}^{\infty} (x^4 + 4x + 4)^{-100} \,dx.
+  \end{equation*}
+
+\item Calculate with 10\% relative error
+
+  \begin{equation*}
+    \int_{-\infty}^{\infty} \cos(100(x^4 -x)) \,dx.
+  \end{equation*}
+
+\item What fraction of the volume of a 5-dimensional cube is the volume of the
+  inscribed sphere? What fraction is it of a 10-dimensional cube?
+
+\item Find the distance of the centre of gravity of a uniform 100-dimensional
+  solid hemisphere of radius 1 from the centre of the sphere with 10\% relative
+  error.
+
+\item Calculate
+
+  \begin{equation*}
+    \idotsint e^{-\sum_{1 \leq i \leq j \leq n} x_i x_j} \,dx_i \dots dx_n.
+  \end{equation*}
+
+\item Investigate the path of a light ray in a plane medium with refractive
+  index $n(y) = y^4 - y^2 + 1$, using Snell's law
+  $n(y) \sin \alpha = \text{const}$, where $\alpha$ is the angle made by the ray
+  with the $y$-axis.
+
+\item Find the derivative of the solution of the equation
+  $\ddot x = x + A\dot x^2$, with initial conditions $x(0) = 1, \dot x(0) = 0$,
+  with respect to the parameter $A$ for $A = 0$.
+
+\item Find the derivative of the solution of the equation
+  $\ddot x = \dot x^2 + x^3$ with initial condition $x(0) = 0, \dot x(0) = A$
+  with respect to $A$ for $A = 0$.
+
+\item Investigate the boundary of the domain of stability
+  ($\max \Re \lambda_j < 0$) in the space of coefficients of the equation
+  $\dddot x + a \ddot x + b \dot x + cx = 0$.
+
+\item Solve the quasi-homogeneous equation
+
+  \begin{equation*}
+    \frac{dy}{dx} = x + \frac{x^3}{y} .
+  \end{equation*}
+
+\item Solve the quasi-homogeneous equation
+
+  \begin{equation*}
+    \ddot x = x^5 + x^2 \dot x .
+  \end{equation*}
+
+\item Can an asymptotically stable equilibrium position become unstable in the
+  Lyapunov sense under linearization?
+
+\item Investigate the behavior as $t \rightarrow + \infty$ of solution of the systems
+
+  \begin{equation*}
+    \begin{cases}
+      \dot x = y, \\
+      \dot y = 2\sin y - y - x,
+    \end{cases}
+    \begin{cases}
+      \dot x = y, \\
+      \dot y = 2x - x^3 - x^2 - \varepsilon y,
+    \end{cases}
+  \end{equation*}
+
+  where $\varepsilon \ll 1$.
+
+\item Sketch the images of the solutions of the equation
+
+  \begin{equation*}
+    \ddot x = F(x) - k\dot x, \quad F = -dU/dx,
+  \end{equation*}
+
+  in the $(x, E)$-plane, where $E = \dot x^2/2 + U(x)$, near non-degenerate
+  critical points of the potential $U$.
+
+\item Sketch the phase portrait and investigate its variation under variation of
+  the small complex parameter $\varepsilon$:
+
+  \begin{equation*}
+    \dot z = \varepsilon z - (1 + i) z \left| z \right|^2 + \bar{z}^4.
+  \end{equation*}
+
+\item A charge moves with velocity 1 in a plane under the action of a strong
+  magnetic field $B(x, y)$ perpendicular to the plane. To which side will the
+  centre of the Larmor neighbourhood drift? Calculate the velocity of this drift (to a first approximation). [Mathematically, this concerns the curves of curvature $NB$ as $N \rightarrow \infty$.]
+
+\item Find the sum of the indexes of the singular points other than zero of the
+  vector field $z\bar{z}^2 + z^4 + 2\bar{z}^4$.
+
+\item Find the index of the singular point 0 of the vector field with components
+
+  \begin{equation*}
+    (x^4 + y^4 + z^4,\quad x^3y - xy^3,\quad xyz^2).
+  \end{equation*}
+
+\item Find the index of the singular point 0 of the vector field
+
+  \begin{equation*}
+    \gradt (xy + yz + xz).
+  \end{equation*}
+
+\item Find the linking coefficient of the phase trajectories of the equation of
+  small oscillations $\ddot x = -4x, \ddot y = -9y$ on a level surface of the
+  total energy.
+
+\item Investigate the singular points on the curve $y = x^3$ in the projective plane.
+
+\item Sketch the geodesics on the surface
+
+  \begin{equation*}
+    (x^2 + y^2 - 2)^2 + z^2 = 1 .
+  \end{equation*}
+
+\item Sketch the evolvent of the cubic parabola $y = x^3$ (the evolvent is the
+  locus of the points $\vec{r}(s) + (c-s)\dot{\vec{r}}(s)$, where $s$ is the
+  arc-length of the curve $\vec{r}(s)$ and $c$ is a constant).
+
+\item Prove that in Euclidean space the surfaces
+
+  \begin{equation*}
+    ((A - \lambda E)^{-1} x, x) = 1
+  \end{equation*}
+
+  passing through the point $x$ and corresponding to different values of
+  $\lambda$ are pairwise orthogonal ($A$ is a symmetric operator without
+  multiple eigenvalues).
+
+\item Calculate the integral of the Gaussian curvature of the surface
+
+  \begin{equation*}
+    z^4 + (x^2 + y^2 - 1)(2x^2 + 3y^2 - 1) = 0 .
+  \end{equation*}
+
+\item Calculate the Gauss integral
+
+  \begin{equation*}
+    \oiint \frac{\left( d\vec{A}, d\vec{B}, \vec{A} - \vec{B} \right)}{\left| \vec{A} - \vec{B} \right|^3},
+  \end{equation*}
+
+  where $\vec{A}$ runs along the curve $x = \cos \alpha, y = \sin \alpha, z = 0$
+  and $\vec{B}$ along the curve
+  $x = 2 \cos^2 \beta, y = \frac{1}{2}\sin\beta, z = \sin 2\beta$.
+
+\item Find the parallel displacement of a vector pointing north at Leningrad
+  (latitude $60^\circ$) from west to east along a closed parallel.
+
+\item Find the geodesic curvature of the line $y = 1$ in the upper half-plane with the Lobachevskii-Poincar\'e metric
+
+  \begin{equation*}
+    ds^2 = (dx^2 + dy^2)/y^2 .
+  \end{equation*}
+
+\item Do the medians of a triangle meet in a single point in the Lobachevskii plane? What about the altitudes?
+
+\item Find the Betti numbers of the surface $x^2_1 + \dots + x^2_k - y^2_1 - \dots - y^2_l = 1$ and the set $x^2_1 + \dots + x^2_k \leq 1 + y^2_1 + \dots + y^2_l$ in a $(k + l)$-dimensional linear space.
+
+\item Find the Betti numbers of the surface $x^2 + y^2 = 1 + z^2$ in the three-dimensional projective space. The same for the surfaces $z = xy$, $z = x^2$, $z^2 = x^2 + y^2$.
+
+\item Find the self-intersection index of the surface $x^4 + y^4 = 1$ in the projective plane $\textrm{CP}^2$.
+
+\item Map the interior of the unit disc conformally onto the first quadrant.
+
+\item Map the exterior of the disc conformally onto the exterior of a given ellipse.
+
+\item Map the half-plane without a segment perpendicular to its boundary conformally onto the half-plane.
+
+\item Calculate
+
+  \begin{equation*}
+    \oint_{\abs{z}=2} \frac{\dd z}{\sqrt{1+z^{10}}} \, .
+  \end{equation*}
+
+\item Calculate
+
+  \begin{equation*}
+    \int_{-\infty}^\infty \frac{e^{ikx}}{1+x^2} \dd x \, .
+  \end{equation*}
+
+\item Calculate the integral
+
+  \begin{equation*}
+    \int_{-\infty}^\infty e^{ikx} \frac{1 - e^x}{1+e^x} \dd x \, .
+  \end{equation*}
+
+\item Calculate the first term of the asymptotic expression as $k \to \infty$ of the integral
+
+  \begin{equation*}
+    \int_{-\infty}^{\infty} \frac{e^{ikx} \dd x}{\sqrt{1 + x^{2n}}} \, .
+  \end{equation*}
+
+\item Investigate the singular points of the differential form $dt = dx/y$ on the compact Riemann surface $y^2/2 + U(x) = E$, where $U$ is a polynomial and $E$ is not a critical value.
+
+\item $\ddot x = 3x-x^3-1$. In which of the potential wells is the period of oscillation greater (in the shallower or the deeper) with equal values of the total energy?
+
+\item Investigate topologically the Riemann surface of the function
+  \begin{equation*}
+    w = \arctan z
+  \end{equation*}
+
+\item How many handles has the Riemann surface of the function
+  \begin{equation*}
+    w = \sqrt{1 + z^n} ?
+  \end{equation*}
+
+\item Find the dimension of the solution space of the problem $\pdv*{u}{\bar z} = \delta(z - i)$ for $\Im z \geqslant 0, \Im u(z) = 0$ for $\Im z = 0, u \to 0$ as $z \to \infty$.
+
+\item Find the dimension of the solution space of the problem $\pdv*{u}{\bar z} = a\delta(z - i) + b\delta(z+i)$ for $\abs{z} \leqslant 2, \Im u = 0$ for $\abs{z} = 2$.
+
+\item Investigate the existence and uniqueness of the solution of the problem $yu_x = xu_y, \eval{u}_{x=1} = \cos y$ in a neighbourhood of the point $(1, y_0)$.
+
+\item Is there a solution of the Cauchy problem
+  \begin{equation*}
+    x(x^2 + y^2)\pdv{u}{x} + y^3\pdv{u}{y} = 0, \quad \eval{u}_{y=0} = 1
+  \end{equation*}
+  in a neighbourhood of the point $(x_0, 0)$ of the $x$-axis? Is it unique?
+
+\item What is the largest value of $t$ for which the solution of the problem
+  \begin{equation*}
+    \pdv{u}{t} + u\pdv{u}{x} = \sin x, \quad \eval{u}_{t=0} = 0,
+  \end{equation*}
+  can be extended to the interval $[0, t)$?
+
+\item Find the solutions of the equation $y \pdv{u}{x} - \sin x \pdv{u}{y} = u^2$ in a neighbourhood of the point $(0, 0)$.
+
+\item Is there a solution of the Cauchy problem $y \pdv{u}{x} + \sin x \pdv{u}{y} = y, \eval{u}_{x = 0} = y^4$ on the whole $(x, y)$ plane? Is it unique?
+
+\item Does the Cauchy problem $\eval{u}_{y = x^2} = 1, (\nabla u)^2 = 1$ have a smooth solution in the domain $y \geq x^2$? In the domain $y \leq x^2$?
+
+\item Find the mean value of the function $\ln r$ on the circle $(x-a)^2 + (y-b)^2 = R^2$ (of the function $1/r$ on the sphere).
+
+\item Solve the Dirichlet problem
+
+  \begin{align*}
+    \Delta u = 0\ &\textrm{for}\ x^2 + y^2 < 1; \\
+    u = 1\ &\textrm{for}\ x^2 + y^2 = 1, \, y > 0; \\
+    u = -1\ &\textrm{for}\ x^2 + y^2 = 1, \, y < 0.
+  \end{align*}
+
+\item What is the dimension of the space of solutions continuous on $x^2 + y^2 \geq 1$ of the problem
+  \begin{equation*}
+    \Delta u = 0 \quad \textrm{for} \quad x^2 + y^2 \ge 1, \, \pdv{u}{n} = 0 \quad \textrm{for} \quad x^2 + y^2 = 1 ?
+  \end{equation*}
+
+\item Find
+  \begin{equation*}
+    \inf \iint_{x^2+y^2 \leq 1} \qty(\pdv{u}{x})^2 + \qty(\pdv{u}{y})^2 \dd{x}\dd{y}
+  \end{equation*}
+  for $C^\infty$-functions $u$ that vanish at $0$ and are equal to $1$ on $x^2 + y^2 = 1$.
+
+\item Prove that the solid angle based on a given closed contour is a function of the vertex of the angle that is harmonic outside of the contour.
+
+\item Calculate the mean value of the solid angle by which the disc $x^2 = y^2 \leq 1$ lying in the plane $z = 0$ is seen from points of the sphere $x^2 + y^2 + (z-2)^2 = 1$.
+
+\item Calculate the charge density on the conducting boundary $x^2 + y^2 + z^2 = 1$ of a cavity in which a charge $q = 1$ is placed at distance $r$ from the centre.
+
+\item Calculate to the first order in $\varepsilon$ the effect that the influence of the flattening of the earth ($\varepsilon \approx 1/300$) on the gravitational field of the earth has on the distance of the moon (assuming the earth to be homogeneous).
+
+\item Find (to the first order in $\varepsilon$) the influence of the imperfection of an almost spherical capacitor $R = 1 + \varepsilon(\varphi, \theta)$ on its capacity.
+
+\item Sketch the graph of $u(x, 1)$, if $0 \leq x \leq 1$,
+
+  \begin{equation*}
+    \pdv{u}{t} = \pdv[2]{u}{x}\, , \quad \eval{u}_{t=0} = x^2, \eval{u}_{x^2 = x} = x^2 \, .
+  \end{equation*}
+
+\item On account of the annual fluctuation of temperature the ground at the town of $N$ freezes to a depth of 2 metres. To what depth would it freeze on account of a daily fluctuation of the same amplitude?
+
+\item Investigate the behaviour at $t \to + \infty$ of the solution of the problem
+  \begin{equation*}
+    u_t + (u \sin x)_x = \varepsilon u_{xx}, \eval{u}_{t=0} \equiv 1, \varepsilon \leqslant 1.
+  \end{equation*}
+
+\item Find the eigenvalues and their multiplicities of the Laplace operator ${\Laplace = \divt \gradt}$ on a sphere of radius $R$ in Euclidean space of dimension $n$.
+
+\item Solve the Cauchy problem
+  \begin{gather*}
+    \pdv[2]{A}{t} = 9\pdv[2]{A}{x} - 2B, \pdv[2]{B}{t} = 6 \pdv[2]{B}{x} -2A, \\
+    \eval{A}_{t=0} = \cos x, \eval{B}_{t=0} = 0, \eval{\pdv{A}{t}}_{t=0} = \eval{\pdv{B}{t}}_{t=0}=0.
+  \end{gather*}
+
+\item How many solutions has the boundary-value problem
+  \begin{equation*}
+    u_{xx} + \lambda u = \sin x, u(0) = u(\pi) = 0 ?
+  \end{equation*}
+
+\item Solve the equation
+  \begin{equation*}
+    \int_0^1(x+y)^2u(x)\dd{x} = \lambda u(y) + 1.
+  \end{equation*}
+
+\item Find the Green's function of the operator $\dv*[2]{x} -1$ and solve the equation
+  \begin{equation*}
+    \int_{-\infty}^\infty e^{-\abs{x-y}}u(y)\dd{y} = e^{-x^2}.
+  \end{equation*}
+
+\item For what values of the velocity $c$ does the equation $u_t = u - u^2 + u_{xx}$ have a solution in the form of a travelling wave $u = \varphi(x-ct), \varphi(-\infty) = 1, \varphi(\infty) = 0, 0 \leqslant u \leqslant 1$?
+
+\item Find solutions of the equation $u_t = u_{xxx} + uu_x$ in the form of a travelling wave $u = \varphi(x-ct), \varphi(\pm\infty) = 0$.
+
+\item Find the number of positive and negative squares in the canonical form of the quadratic form $\sum_{i < j} (x_i - x_j)^2$ in $n$ variables. The same for the form $\sum_{i < j} x_i x_j$.
+
+\item Find the lengths of the principal axes of the ellipsoid
+  \begin{equation*}
+    \sum_{i \leq j} x_i x_j = 1 .
+  \end{equation*}
+
+\item Through the centre of a cube (tetrahedron, icosahedron) draw a straight line in such a way that the sum of the squares of its distances from the vertices is a) minimal, b) maximal.
+
+\item Find the derivatives of the lengths of the semiaxes of the ellipsoid $x^2 + y^2 + z^2 + xy + yz + zx = 1 + \varepsilon xy$ with respect to $\varepsilon$ at $\varepsilon = 0$.
+
+\item How many figures can be obtained by intersecting the infinite-dimensional cube $\abs{x_k} \leq 1, k = 1, 2, \dots,$ with a two-dimensional plane?
+
+\item Calculate the sum of vector products $[[x, y], z] + [[y, z], x] + [[z, x], y]$.
+
+\item Calculate the sum of matrix commutators $[A, [B, C]] + [B, [C, A]] + [C, [A, B]]$, where $[A, B] = AB - BA$.
+
+\item Find the Jordan normal form of the operator $e^{\dv*{t}}$ in the space of quasi-polynomials ${e^{\lambda t} p(t)}$, where the degreee of the polynomial $p$ is less than 5, and of the operator $\textrm{ad}_A, B \mapsto [A, B]$, in the space of $n \times n$ matrices $B$, where $A$ is a diagonal matrix.
+
+\item Find the orders of the subgroups of the group of rotations of the cube, and find its normal subgroups.
+
+\item Decompose the space of functions defined on the vertices of a cube into invariant subspaces irreducible with respect to the group of a)~its symmetries, b)~its rotations.
+
+\item Decompose a 5-dimensional real linear space into the irreducible invariant subspaces of the group generated by cyclic permutations of the basic vectors.
+
+\item Decompose the space of homogeneous polynomials of degree 5 in $(x, y, z)$ into irreducible subspaces invariant with respect to the rotation group $SO(3)$.
+
+\item Each of 3600 subscribers of a telephone exchange calls it once an hour on average. What is the probability that in a given second 5 or more calls are received? Estimate the mean interval of time between such seconds $(i, i+1)$.
+
+\item A particle performing a random walk on the integer points of the semi-axis $x \geq 0$ moves a distance 1 to the right with probability $a$, and to the left with probability $b$, and stands still in the remaining cases (if $x = 0$, it stands still instead of moving to the left). Determine the steady-state probability distribution, and also the expectation of $x$ and $x^2$ over a long time, if the particle starts at the point 0.
+
+\item In the game of ``Fingers'', $N$ players stand in a circle and simultaneously thrust out their right hands, each with a certain number of fingers showing. The total number of fingers  shown is counted out round the circle from the leader, and the player on whom the count stops is the winner. How large must $N$ be for a suitably chosen group of $N/10$ players to contain a winner with probability at least $0.9$? How does the probability that the leader wins behave as $N \to \infty$?
+
+\item One player conceals a 10 or 20 copeck coin, and the other guesses its value. If he is right he gets the coin, if wrong he pays 15 copecks. Is this a fair game? What are the optimal mixed strategies for both players?
+
+\item Find the mathematical expectations of the area of the projection of a cube with edge of length 1 onto a plane with an isotropically distributed random direction of projection.
+
+\end{enumerate}
+
+Translated by C.J.\,Shaddock
+
+\end{document}
